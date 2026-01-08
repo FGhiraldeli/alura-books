@@ -27,7 +27,6 @@ const Subtitulo = styled.h3`
 
 function Pesquisa() {
     const [livrosPesquisados, setLivrosPesquisados] = useState([])
-    console.log(livrosPesquisados)
 
     return (
         <PesquisaContainer>
@@ -41,6 +40,12 @@ function Pesquisa() {
                     setLivrosPesquisados(resultadoPesquisa)
                 }}
             />
+            {livrosPesquisados.map(livro => (
+                <div>
+                    <p>{livro.nome}</p>
+                    <img src={livro.src} alt="" />
+                </div>
+            ))}
         </PesquisaContainer>
     )
 }
