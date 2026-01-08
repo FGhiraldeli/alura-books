@@ -31,6 +31,12 @@ const Resultado = styled.div`
     align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
+    border-width: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #000;
+    padding: 0.5%;
+
     p {
         width: 200px;
     }
