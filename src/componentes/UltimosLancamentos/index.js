@@ -1,6 +1,8 @@
 import { livros_lancamentos } from "./dadosUltimosLancamentos"
 import styled from "styled-components"
 import { Titulo } from "../Titulo"
+import CardRecomenda from "../CardRecomenda"
+import imagemLivro from '../../imagens/capa_jurassic_park.jpg'
 
 const UltimosLancamentosContainer = styled.section`
     background-color: #EBECEE;
@@ -29,6 +31,12 @@ function UltimosLancamentos() {
                     <img src={livro.src} key={index} alt="" />
                 ))}
             </NovosLivrosContainer>
+            <CardRecomenda 
+                titulo="Talvez se enteresse por"
+                subtitulo="Jurassic Park"
+                descricao="Dinossauros matando pessoas"
+                img={imagemLivro}
+                />
         </UltimosLancamentosContainer>
     )
 }
