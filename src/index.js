@@ -32,7 +32,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/favoritos' element={<p>oi</p>}/>
+        <Route path='/' element={<App />}/>
+      </Routes>
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 
