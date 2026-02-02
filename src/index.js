@@ -5,6 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './rotas/Home';
+import Favoritos from './rotas/Favoritos';
+import Categorias from './rotas/Categorias';
+import Estante from './rotas/Estante';
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -33,13 +36,15 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <BrowserRouter>
-    <Header />
+      <Header />
       <Routes>
-        <Route path='/favoritos' element={<p>oi</p>}/>
-        <Route path='/' element={<Home />}/>
+        <Route path='/estante' element={<Estante />} />
+        <Route path='/categorias' element={<Categorias />} />
+        <Route path='/favoritos' element={<Favoritos />} />
+        <Route path='/' element={<Home />} />
       </Routes>
     </BrowserRouter>
-    
+
   </React.StrictMode>
 );
 
